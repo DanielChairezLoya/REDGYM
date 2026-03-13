@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>889</width>
+    <width>816</width>
     <height>820</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true">.botones{
 border-radius:20px;
-border:2px solid black;
+border:2px solid white;
 color:#cccccc;
 background-color:#000000;
 }
@@ -24,7 +24,15 @@ background-color:#000000;
 .botones:hover{
 background-color:#9F111B;
 
-}</string>
+}
+
+.fondo{
+border-image: url(&quot;img/fondomenu.jpg&quot;);
+}
+</string>
+  </property>
+  <property name="class" stdset="0">
+   <string>fondo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -115,7 +123,7 @@ background-color:#9F111B;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>889</width>
+     <width>816</width>
      <height>26</height>
     </rect>
    </property>

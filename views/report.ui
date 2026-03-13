@@ -67,7 +67,7 @@ background-color:#9F111B;
        <string notr="true">color:white;</string>
       </property>
       <property name="text">
-       <string>Trainer List</string>
+       <string>Members List</string>
       </property>
      </widget>
     </item>
@@ -167,7 +167,7 @@ color:white;</string>
 background-color:#9F111B;</string>
         </property>
         <property name="text">
-         <string>+ ADD TRAINER</string>
+         <string>+ ADD MEMBERS</string>
         </property>
        </widget>
       </item>
@@ -177,18 +177,13 @@ background-color:#9F111B;</string>
      <widget class="QTableWidget" name="tableWidget">
       <property name="minimumSize">
        <size>
-        <width>1200</width>
+        <width>1230</width>
         <height>0</height>
        </size>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color:#292C37;</string>
       </property>
-      <column>
-       <property name="text">
-        <string>Trainer id</string>
-       </property>
-      </column>
       <column>
        <property name="text">
         <string>Foto</string>
@@ -201,27 +196,42 @@ background-color:#9F111B;</string>
       </column>
       <column>
        <property name="text">
+        <string>Member id</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Numero</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Correo</string>
+        <string>Joining Date</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>experiencia</string>
+        <string>Expire Date</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Rating</string>
+        <string>Paid</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Miembros</string>
+        <string>Due</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Action</string>
        </property>
       </column>
      </widget>

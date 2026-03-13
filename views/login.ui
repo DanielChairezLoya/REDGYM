@@ -21,7 +21,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">.fondo{
-border-image: url(&quot;img/gym.jpg&quot;);
+border-image: url(&quot;img/gym2.jpg&quot;);
 }
 
 .fondo2{
