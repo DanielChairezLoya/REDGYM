@@ -10,15 +10,100 @@
     <height>840</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">.botonpagina{
+color:#9F111B;
+background-color:#292C37;
+border:2px #292C37;
+border-radius: 20px;
+padding:5px
+}
+
+.botonpagina:hover{
+color:white;
+background-color:#9F111B;
+}
+
+.fondo{
+background-color:#000000;
+}
+
+.btnback{
+background-color:#292C37;
+}
+
+.btnback:hover{
+background-color:#9F111B;
+}
+</string>
+  </property>
+  <property name="class" stdset="0">
+   <string>fondo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QLabel" name="label">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Trainer List</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QPushButton" name="btn_back">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>60</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../img/undo.png</normaloff>../img/undo.png</iconset>
+        </property>
+        <property name="class" stdset="0">
+         <string>btnback</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txt_search">
         <property name="minimumSize">
          <size>
           <width>0</width>
@@ -31,10 +116,14 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#292C37;
+color:white;</string>
+        </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="btn_search">
         <property name="minimumSize">
          <size>
           <width>100</width>
@@ -47,18 +136,35 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#292C37;
+color:white;</string>
+        </property>
         <property name="text">
          <string>Search</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../img/search.png</normaloff>../img/search.png</iconset>
         </property>
        </widget>
       </item>
       <item alignment="Qt::AlignRight">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="btn_addT">
         <property name="minimumSize">
          <size>
           <width>150</width>
           <height>40</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:#cccccc;
+background-color:#9F111B;</string>
         </property>
         <property name="text">
          <string>+ ADD TRAINER</string>
@@ -69,6 +175,9 @@
     </item>
     <item>
      <widget class="QTableWidget" name="tableWidget">
+      <property name="styleSheet">
+       <string notr="true">background-color:#292C37;</string>
+      </property>
       <column>
        <property name="text">
         <string>Trainer id</string>
@@ -114,7 +223,26 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_4">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -124,10 +252,19 @@
         <property name="text">
          <string>&lt;</string>
         </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
+        </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_5">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -137,10 +274,19 @@
         <property name="text">
          <string>1</string>
         </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
+        </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_6">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -150,10 +296,19 @@
         <property name="text">
          <string>2</string>
         </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
+        </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_7">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -163,10 +318,19 @@
         <property name="text">
          <string>3</string>
         </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
+        </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_9">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -176,10 +340,19 @@
         <property name="text">
          <string>4</string>
         </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
+        </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_8">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -189,10 +362,19 @@
         <property name="text">
          <string>5</string>
         </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
+        </property>
        </widget>
       </item>
-      <item>
+      <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="pushButton_3">
+        <property name="minimumSize">
+         <size>
+          <width>30</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="maximumSize">
          <size>
           <width>30</width>
@@ -201,6 +383,9 @@
         </property>
         <property name="text">
          <string>&gt;</string>
+        </property>
+        <property name="class" stdset="0">
+         <string>botonpagina</string>
         </property>
        </widget>
       </item>
