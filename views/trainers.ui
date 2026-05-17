@@ -201,6 +201,11 @@ background-color:#9F111B;</string>
       </column>
       <column>
        <property name="text">
+        <string>Apellido</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Numero</string>
        </property>
       </column>
@@ -217,11 +222,6 @@ background-color:#9F111B;</string>
       <column>
        <property name="text">
         <string>Rating</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Miembros</string>
        </property>
       </column>
      </widget>

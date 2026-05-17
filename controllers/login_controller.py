@@ -15,6 +15,6 @@ class LoginController:
         else:
             QtWidgets.QMessageBox.warning(
                 self.window,
-                "Abarrotes TEC -ERROR",
+                "REDGYM -ERROR",
                 "Login incorrecto 😡"
             )

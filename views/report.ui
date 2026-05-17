@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1245</width>
+    <width>1252</width>
     <height>840</height>
    </rect>
   </property>
@@ -216,6 +216,11 @@ background-color:#9F111B;</string>
       </column>
       <column>
        <property name="text">
+        <string>trainer_id</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Paid</string>
        </property>
       </column>
@@ -227,11 +232,6 @@ background-color:#9F111B;</string>
       <column>
        <property name="text">
         <string>Status</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Action</string>
        </property>
       </column>
      </widget>
@@ -414,7 +414,7 @@ background-color:#9F111B;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1245</width>
+     <width>1252</width>
      <height>26</height>
     </rect>
    </property>
