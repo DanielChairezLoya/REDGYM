@@ -191,17 +191,27 @@ background-color:#9F111B;</string>
       </column>
       <column>
        <property name="text">
-        <string>Nombre</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
         <string>Member id</string>
        </property>
       </column>
       <column>
        <property name="text">
+        <string>Nombre</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Apellido</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
         <string>Numero</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>trainer_id</string>
        </property>
       </column>
       <column>
@@ -212,11 +222,6 @@ background-color:#9F111B;</string>
       <column>
        <property name="text">
         <string>Expire Date</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>trainer_id</string>
        </property>
       </column>
       <column>
