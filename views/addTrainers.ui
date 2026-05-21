@@ -84,7 +84,7 @@ color:white;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="txtNombre">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -116,7 +116,7 @@ color:white;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="txtApellido">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -148,7 +148,7 @@ color:white;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="txtNumber">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -180,7 +180,7 @@ color:white;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="txtEmail">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -212,7 +212,7 @@ color:white;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_5">
+       <widget class="QLineEdit" name="txtExperience">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -227,7 +227,7 @@ color:white;
      </layout>
     </item>
     <item alignment="Qt::AlignHCenter">
-     <widget class="QPushButton" name="btn_addT">
+     <widget class="QPushButton" name="btn_add">
       <property name="minimumSize">
        <size>
         <width>250</width>

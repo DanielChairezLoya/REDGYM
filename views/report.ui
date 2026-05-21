@@ -155,7 +155,7 @@ color:white;</string>
        </widget>
       </item>
       <item alignment="Qt::AlignRight">
-       <widget class="QPushButton" name="btn_addT">
+       <widget class="QPushButton" name="btn_addm">
         <property name="minimumSize">
          <size>
           <width>150</width>
