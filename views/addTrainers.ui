@@ -227,7 +227,7 @@ color:white;
      </layout>
     </item>
     <item alignment="Qt::AlignHCenter">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="btn_addT">
       <property name="minimumSize">
        <size>
         <width>250</width>
