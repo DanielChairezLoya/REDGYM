@@ -1,5 +1,6 @@
 from PyQt6 import QtWidgets, uic
 import sys
+from conexion import Conexion
 from controllers.login_controller import LoginController
 from controllers.menu_controller import MenuController
 from controllers.trainers_controller import TrainerController
@@ -8,6 +9,7 @@ from controllers.addM_controller import AddMemberController
 from controllers.addT_controller import AddTrainerController
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtGui import QPalette
+from PyQt6.QtWidgets import QTableWidgetItem
 
 class Login(QtWidgets.QMainWindow):
     login_succesfull=pyqtSignal()
@@ -43,7 +45,7 @@ class Reports(QtWidgets.QMainWindow):
         self.controller = ReportController(self, self)              
 
 class add_Member(QtWidgets.QMainWindow):
-    
+    added=pyqtSignal()
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/addMembers.ui",self)
@@ -76,7 +78,49 @@ class AppManager:
         self.trainer_window.add_t.connect(self.show_addT_window)
         
         self.login_window.show()
+        
+        self.addM_window.added.connect(self.llenar_tablaR)
+        #self.addT_window.added.connect(self.llenar_tablaT)
     
+    def llenar_tablaR(self):
+        self.conexion=Conexion()
+        self.conexion.conectar()
+        self.report_window.tableR.setRowCount(0) 
+        
+        resultados=self.conexion.seleccionar("SELECT * FROM reports;")
+        
+        for fila_numero, fila_datos in enumerate(resultados):
+
+            self.tableWidget.insertRow(fila_numero)
+
+            for columna_numero, dato in enumerate(fila_datos):
+
+                self.report_window.tableR.setItem(
+                    fila_numero,
+                    columna_numero,
+                    QTableWidgetItem(str(dato))
+                )
+                
+    def llenar_tablaT(self):
+        self.conexion=Conexion()
+        self.conexion.conectar()
+        self.report_window.tableT.setRowCount(0) 
+        
+        resultados=self.conexion.seleccionar("SELECT * FROM trainers;")
+        
+        for fila_numero, fila_datos in enumerate(resultados):
+
+            self.tableWidget.insertRow(fila_numero)
+
+            for columna_numero, dato in enumerate(fila_datos):
+
+                self.report_window.tableR.setItem(
+                    fila_numero,
+                    columna_numero,
+                    QTableWidgetItem(str(dato))
+                )
+        
+        
     def back_report_window(self):
         self.menu_window.show()
         self.report_window.close()
@@ -99,7 +143,6 @@ class AppManager:
         
     def show_addM_window(self):
         self.addM_window.show()
-        
         
     def show_addT_window(self):
         self.addT_window.show()

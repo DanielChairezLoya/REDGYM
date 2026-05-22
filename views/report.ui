@@ -174,7 +174,7 @@ background-color:#9F111B;</string>
      </layout>
     </item>
     <item alignment="Qt::AlignHCenter">
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="tableR">
       <property name="minimumSize">
        <size>
         <width>1230</width>

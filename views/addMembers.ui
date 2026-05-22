@@ -148,7 +148,7 @@ color:white;
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="txtNumber">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
