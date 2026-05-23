@@ -29,3 +29,7 @@ class Conexion:
         self.cursor.execute(sql)
         resultado = self.cursor.fetchall()
         return resultado
+    
+    def borrar(self,sql):
+        self.cursor.execute(sql)
+        self.conexion.commit()

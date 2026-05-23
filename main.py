@@ -45,7 +45,7 @@ class Reports(QtWidgets.QMainWindow):
         self.controller = ReportController(self, self)              
 
 class add_Member(QtWidgets.QMainWindow):
-    added=pyqtSignal()
+   
     def __init__(self):
         super().__init__()
         uic.loadUi("./views/addMembers.ui",self)
@@ -79,27 +79,7 @@ class AppManager:
         
         self.login_window.show()
         
-        self.addM_window.added.connect(self.llenar_tablaR)
-        #self.addT_window.added.connect(self.llenar_tablaT)
-    
-    def llenar_tablaR(self):
-        self.conexion=Conexion()
-        self.conexion.conectar()
-        self.report_window.tableR.setRowCount(0) 
         
-        resultados=self.conexion.seleccionar("SELECT * FROM reports;")
-        
-        for fila_numero, fila_datos in enumerate(resultados):
-
-            self.tableWidget.insertRow(fila_numero)
-
-            for columna_numero, dato in enumerate(fila_datos):
-
-                self.report_window.tableR.setItem(
-                    fila_numero,
-                    columna_numero,
-                    QTableWidgetItem(str(dato))
-                )
                 
     def llenar_tablaT(self):
         self.conexion=Conexion()
