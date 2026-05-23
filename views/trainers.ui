@@ -236,7 +236,8 @@ background-color:#9F111B;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:#292C37;</string>
+       <string notr="true">background-color:#292C37;
+color:white;</string>
       </property>
       <column>
        <property name="text">

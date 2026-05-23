@@ -27,7 +27,7 @@ class AddMemberController:
             QtWidgets.QMessageBox.warning(self.window, "Favor de llenar todos los campos")   
         else:
             sql= "INSERT INTO reports values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-            valores = ('img/default.png',0,name,last,number,trainer_id,fecha_actual,fecha_exp,cobro,"$0",status)
+            valores = ('img/default.png',0,name,last,number,trainer_id,fecha_actual,fecha_exp,'$350','$0',status)
             self.conexion.insertar(sql,valores)
             QtWidgets.QMessageBox.information(self.window,"registro insertado","")
                 

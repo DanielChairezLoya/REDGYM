@@ -9,22 +9,11 @@ class ReportController:
         self.window.btn_addm.clicked.connect(self.add_M)
         self.window.btn_refresh.clicked.connect(self.llenar_tablaR)
         self.window.btn_delete.clicked.connect(self.delete)
-        self.llenar_tablaR()
-    #def llenar_tabla(self):
-        #row_position= self.report_window.tableR.rowCount()
-        #self.window.table.insertRow(row_position)
+        self.window.btn_desactivar.clicked.connect(self.Desactivar)
+        self.window.btn_activar.clicked.connect(self.Activar)
         
-        #self.window.table.setItem(row_position, 0, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 1, QtWidgets.QTableWidgetItem())
-        #self.window.table.setItem(row_position, 2, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 3, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 4, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 5, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 6, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 7, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 8, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 9, QtWidgets.QTableWidgetItem('default.png'))
-        #self.window.table.setItem(row_position, 10, QtWidgets.QTableWidgetItem('default.png'))
+        self.llenar_tablaR()
+    
             
     def menu_back(self):
         self.window.back_menu.emit()
@@ -62,8 +51,16 @@ class ReportController:
         self.conexion.borrar(sql)
         self.window.tableR.removeRow(fila)
         
-    def modificar(self):
+    def Desactivar(self):
         fila=self.window.tableR.currentRow()
         
         id_member = self.window.tableR.item(fila, 1).text()
-        sql = "UPDATE reports"
+        sql = (f"UPDATE reports  SET status = FALSE WHERE id_member={id_member}")
+        self.conexion.desactivar_activar(sql)
+        
+    def Activar(self):
+        fila=self.window.tableR.currentRow()
+        
+        id_member = self.window.tableR.item(fila, 1).text()
+        sql = (f"UPDATE reports  SET status = TRUE WHERE id_member={id_member}")
+        self.conexion.desactivar_activar(sql)

@@ -33,3 +33,7 @@ class Conexion:
     def borrar(self,sql):
         self.cursor.execute(sql)
         self.conexion.commit()
+        
+    def desactivar_activar(self,sql):
+        self.cursor.execute(sql)
+        self.conexion.commit()
